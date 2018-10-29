@@ -1,0 +1,9 @@
+.form-horizontal .control-label {
+    
+    text-align: left !important;
+}
+
+.button{
+    text-align: right !important; 
+    color:#0e308d;
+}

@@ -1,0 +1,73 @@
+
+
+
+
+
+<div class="panel-body">
+  <div class="card-body">
+    <form class="form-horizontal" action="/action_page.php">
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label col-sm-12" for="UserId">User Id :</label>
+            <div class="col-sm-12">
+              <input type="text" class="form-control" id="UserId" placeholder="Enter UserId" [(ngModel)]="applyleaveObj.userId">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label col-sm-12" for="LeaveType">Leave Type:</label>
+            <div class="col-sm-12">
+              <select class="form-control" id="LeaveType" name="LeaveType" [(ngModel)]="applyLeaveObj.LeaveTypeId">
+                <option *ngFor="let lty of leaveTypes" value="{{leaveType.id}}">{{lty.leaveType}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label col-sm-6" for="StartDate">Start Date:</label>
+            <div class="col-sm-12">
+              <input type="date" class="form-control" id="StartDate" placeholder="Enter Start Date" [(ngModel)]="applyleaveObj.startDate">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label col-sm-6" for="endDate">End Date:</label>
+            <div class="col-sm-12">
+              <input type="date" class="form-control" id="endDate" placeholder="Enter End Date" [(ngModel)]="applyleaveObj.endDate">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="control-label col-sm-6" for="Reason">Reason:</label>
+            <div class="col-sm-12">
+              <textarea class="form-control" id="Reason" placeholder="Enter Reason" [(ngModel)]="applyleaveObj.reason">
+                                      </textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button ">
+          <button type="button" class="btn btn-primary" (click)="applyLeaveType()">Add </button>
+    </div>
+    </form>
+  </div>
+
+
